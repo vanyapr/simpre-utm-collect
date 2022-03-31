@@ -7,7 +7,7 @@
 меткой в массив, хранящийся в локалсторадже.
 
 ## Демо
-[Открыть демонстрацию](https://vanyapr.github.io/utm-to-localstorage/?utm_source=github&utm_medium=cpm&utm_something=cpm_45)
+[Открыть демонстрацию](https://vanyapr.github.io/simpre-utm-collect/?utm_source=github&utm_medium=cpm&utm_something=cpm_45)
 
 ## Задача
 Есть необходимость сохранять утм метки в браузере пользователя, чтобы потом сабмитить их вместе с заказами, и на их
