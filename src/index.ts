@@ -27,9 +27,9 @@ type TUTMStore = Record<string, string>;
     // ?utm_source=yandex&utm_medium=cpm&utm_...
     if (queryString) {
       const UTMStringRE = /utm_source=[a-zA-Z_0-9=&]+/gim;
-      const UTMSource = queryString.match(UTMStringRE)![0];
+      const UTMSource = queryString.match(UTMStringRE);
 
-      return UTMSource ?? null;
+      return UTMSource ? UTMSource[0] : null;
     }
 
     return null;
