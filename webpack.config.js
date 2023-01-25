@@ -36,7 +36,7 @@ module.exports = {
 
     new CopyPlugin({
       patterns: [
-        { from: path.resolve(__dirname, 'src/favicon.ico'), to: 'docs' },
+        { from: path.resolve(__dirname, 'src/favicon.ico'), to: './' },
       ],
     }),
   ],
@@ -76,7 +76,7 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     static: {
-      directory: path.join(__dirname, 'build'),
+      directory: path.join(__dirname, 'docs'),
     },
     compress: true,
     port: 9000,
