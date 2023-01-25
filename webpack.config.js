@@ -1,13 +1,20 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // Плагин для работы с хтмл в вебпаке
 const CopyPlugin = require('copy-webpack-plugin'); // Плагин для копирования файлов
+const ASSET_PATH = process.env.ASSET_PATH || '/';
+
 
 module.exports = {
   mode: 'production',
-  entry: './src/index.ts',
+  entry: {
+    'utm-collector': './src/index.ts',
+    'page': './src/page.ts',
+  },
   output: {
-    path: path.resolve(__dirname, 'docs'),
-    filename: 'utm-collector.min.js',
+    path: path.resolve(__dirname, 'docs'), // Директория назначения
+    // filename: 'main.js', // Имя файла в директории
+    filename: '[name].min.js',
+    publicPath: ASSET_PATH,
   },
   resolve: {
     // Такой список нужен для резолва всех необходимых разрешений файлов
