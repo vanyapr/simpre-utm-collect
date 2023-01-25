@@ -8,5 +8,4 @@ const displayCurrentUtmStore = () => {
   }
 }
 
-
 displayCurrentUtmStore();
